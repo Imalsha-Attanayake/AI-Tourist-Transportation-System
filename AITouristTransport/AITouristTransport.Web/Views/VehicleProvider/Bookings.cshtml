@@ -1,0 +1,200 @@
+﻿@model IEnumerable<AITouristTransport.Web.Models.Booking>
+
+@{
+    ViewData["Title"] = "Manage Bookings";
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Manage Bookings</h1>
+
+        <p class="text-muted">
+            View and manage vehicle booking requests from tourists.
+        </p>
+    </div>
+
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row g-4">
+
+            @foreach (var booking in Model)
+            {
+                <div class="col-lg-6">
+
+                    <div class="card shadow border-0 h-100">
+
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <h5 class="fw-bold">
+                                    Booking #@booking.BookingId
+                                </h5>
+
+                                @if (booking.Status == "Approved")
+                                {
+                                    <span class="badge bg-success">
+                                        Approved
+                                    </span>
+                                }
+                                else if (booking.Status == "Rejected")
+                                {
+                                    <span class="badge bg-danger">
+                                        Rejected
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning text-dark">
+                                        Pending
+                                    </span>
+                                }
+
+                            </div>
+
+                            <hr />
+
+                            <p>
+                                <strong>Tourist:</strong>
+                                @(booking.User?.FirstName ?? "Unknown")
+                                @(booking.User?.LastName ?? "")
+                            </p>
+
+                            <p>
+                                <strong>Vehicle:</strong>
+                                @(booking.Vehicle?.VehicleName ?? "Unknown")
+                            </p>
+
+                            <p>
+                                <strong>Route:</strong>
+                                @booking.StartLocation
+                                →
+                                @booking.Destination
+                            </p>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <strong>Travel Date:</strong>
+                                        <br />
+                                        @booking.TravelDate.ToString("dd MMMM yyyy")
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <strong>Duration:</strong>
+                                        <br />
+                                        @booking.TravelDurationDays days
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <strong>Travellers:</strong>
+                                        <br />
+                                        @booking.Travellers
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <strong>Total Amount:</strong>
+                                        <br />
+                                        LKR @booking.TotalAmount.ToString("N2")
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            @if (booking.Status == "Pending")
+                            {
+                                <div class="d-flex gap-2 mt-3">
+
+                                    <form asp-action="ApproveBooking"
+                                          asp-controller="VehicleProvider"
+                                          method="post">
+
+                                        @Html.AntiForgeryToken()
+
+                                        <input type="hidden"
+                                               name="id"
+                                               value="@booking.BookingId" />
+
+                                        <button type="submit"
+                                                class="btn btn-success">
+
+                                            Approve
+
+                                        </button>
+
+                                    </form>
+
+
+                                    <form asp-action="RejectBooking"
+                                          asp-controller="VehicleProvider"
+                                          method="post">
+
+                                        @Html.AntiForgeryToken()
+
+                                        <input type="hidden"
+                                               name="id"
+                                               value="@booking.BookingId" />
+
+                                        <button type="submit"
+                                                class="btn btn-danger">
+
+                                            Reject
+
+                                        </button>
+
+                                    </form>
+
+                                </div>
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+    else
+    {
+        <div class="card shadow border-0">
+
+            <div class="card-body text-center p-5">
+
+                <div style="font-size: 50px;">
+                    📋
+                </div>
+
+                <h4 class="mt-3">
+                    No Booking Requests
+                </h4>
+
+                <p class="text-muted">
+                    There are currently no booking requests for your vehicles.
+                </p>
+
+            </div>
+
+        </div>
+    }
+
+</div>

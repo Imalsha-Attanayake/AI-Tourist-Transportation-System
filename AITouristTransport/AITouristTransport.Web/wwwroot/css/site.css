@@ -1,0 +1,235 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+   padding-top: 80px;
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+
+.hero-section {
+    padding: 100px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient( 135deg, #d4dde8 0%, #e3eaf2 50%, #d2dce8 100% );
+}
+
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+
+.hero-section h1 {
+    color: #1f2937;
+}
+
+
+.hero-section .lead {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+
+.hero-image {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+    .hero-image:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.25);
+    }
+
+.hero-section .btn {
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+}
+
+.hero-section .btn-primary {
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* ==============================
+   Features Section
+   ============================== */
+
+.features-section {
+    background: #ffffff;
+}
+
+
+.feature-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+.feature-card h5 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+
+.feature-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   Destinations Section
+   ============================== */
+
+
+.destinations-section {
+    background: #f8fbff;
+}
+
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .destination-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+
+
+.destination-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    background: linear-gradient( 135deg, #0d6efd, #20c997 );
+    color: white;
+}
+
+
+
+.destination-card h5 {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+
+
+.destination-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   Navigation Bar
+   ============================== */
+
+.custom-navbar {
+    background: rgba(33, 37, 41, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+    .custom-navbar .navbar-brand {
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+
+    .custom-navbar .nav-link {
+        color: #f8f9fa;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: #20c997;
+        }
+
+    .custom-navbar .btn {
+        border-radius: 10px;
+        padding: 8px 18px;
+    }
+
+/* ===========================
+   AI Trip Planner
+=========================== */
+
+.trip-planner-section {
+    margin-top: 50px;
+    padding: 70px 0;
+    background: #d7e2ee;
+}
+
+.trip-planner-card {
+    background: /*#f7faff*/ linear-gradient( to bottom, #dfe8f2, #d5e1ed );
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+    border: 1px solid #dce7f5;
+}
+
+    .trip-planner-card h2 {
+        color: #0d6efd;
+    }
+
+    .trip-planner-card .form-control,
+    .trip-planner-card .form-select {
+        border-radius: 12px;
+        height: 50px;
+    }
+
+    .trip-planner-card .btn {
+        height: 50px;
+        border-radius: 12px;
+        font-weight: 600;
+    }

@@ -1,0 +1,29 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AITouristTransport.Web.Models
+{
+    public class Review
+    {
+        [Key]
+        public int ReviewId { get; set; }
+
+        [Required]
+        public int UserId { get; set; }
+
+        public User? User { get; set; }
+
+        [Required]
+        public int BookingId { get; set; }
+
+        public Booking? Booking { get; set; }
+
+        [Required]
+        [Range(1, 5)]
+        public int Rating { get; set; }
+
+        [StringLength(500)]
+        public string? Comment { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+    }
+}

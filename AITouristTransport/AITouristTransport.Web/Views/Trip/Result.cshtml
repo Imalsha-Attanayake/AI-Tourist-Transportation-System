@@ -1,0 +1,304 @@
+﻿@{
+    ViewData["Title"] = "Trip Plan";
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Your AI-Powered Trip Plan
+        </h1>
+
+        <p class="text-muted">
+            Your trip has been analysed using our AI travel planning system.
+        </p>
+
+    </div>
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+            <!-- Trip Details -->
+            <div class="card shadow border-0 mb-4">
+
+                <div class="card-body p-4">
+
+                    <h4 class="mb-4">
+                        📋 Trip Details
+                    </h4>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Starting Location
+                                </small>
+
+                                <h5 class="mb-0">
+                                    @TempData["StartLocation"]
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Destination
+                                </small>
+
+                                <h5 class="mb-0">
+                                    @TempData["Destination"]
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Travel Date
+                                </small>
+
+                                <h5 class="mb-0">
+                                    @TempData["TravelDate"]
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Travellers
+                                </small>
+
+                                <h5 class="mb-0">
+                                    @TempData["Travellers"]
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Travel Duration
+                                </small>
+
+                                <h5 class="mb-0">
+                                    @TempData["TravelDurationDays"] days
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="p-3 bg-light rounded">
+
+                                <small class="text-muted">
+                                    Your Budget
+                                </small>
+
+                                <h5 class="mb-0">
+                                    LKR @TempData["Budget"]
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI Results -->
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4">
+
+                    <div class="text-center mb-4">
+
+                        <h3 class="fw-bold">
+                            🤖 AI Travel Recommendations
+                        </h3>
+
+                        <p class="text-muted">
+                            Recommendations generated based on your travel requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+                        <!-- Vehicle Recommendation -->
+                        <div class="col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <div class="text-center">
+
+                                    <div style="font-size: 40px;">
+                                        🚗
+                                    </div>
+
+                                    <h5 class="mt-2">
+                                        Recommended Vehicle
+                                    </h5>
+
+                                    <h3 class="text-primary">
+                                        @TempData["RecommendedVehicle"]
+                                    </h3>
+
+                                    <p class="text-muted mb-0">
+                                        Recommended by the AI vehicle classification model.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Budget Prediction -->
+                        <div class="col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <div class="text-center">
+
+                                    <div style="font-size: 40px;">
+                                        💰
+                                    </div>
+
+                                    <h5 class="mt-2">
+                                        Estimated Travel Cost
+                                    </h5>
+
+                                    <h3 class="text-primary">
+                                        LKR @TempData["EstimatedCostLkr"]
+                                    </h3>
+
+                                    <p class="text-muted mb-0">
+                                        Estimated using the AI budget prediction model.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Optimised Route -->
+                        <div class="col-md-8">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <div class="text-center">
+
+                                    <div style="font-size: 40px;">
+                                        🗺️
+                                    </div>
+
+                                    <h5 class="mt-2">
+                                        Optimised Route
+                                    </h5>
+
+                                    <h5 class="text-primary">
+                                        @TempData["Route"]
+                                    </h5>
+
+                                    <p class="text-muted mb-0">
+                                        Route calculated using Dijkstra's shortest-path algorithm.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Total Distance -->
+                        <div class="col-md-4">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <div class="text-center">
+
+                                    <div style="font-size: 40px;">
+                                        📍
+                                    </div>
+
+                                    <h5 class="mt-2">
+                                        Total Distance
+                                    </h5>
+
+                                    <h3 class="text-primary">
+                                        @TempData["TotalDistanceKm"] km
+                                    </h3>
+
+                                    <p class="text-muted mb-0">
+                                        Optimised travel distance.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    @if (TempData["AIError"] != null)
+                    {
+                        <div class="alert alert-danger mt-4">
+
+                            <strong>AI Service Error:</strong>
+
+                            @TempData["AIError"]
+
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

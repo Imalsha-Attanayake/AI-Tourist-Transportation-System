@@ -1,0 +1,548 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-75">
+
+            <!-- Left Content -->
+            <div class="col-lg-6">
+
+                <span class="badge bg-primary mb-3 px-3 py-2">
+                    AI-Powered Travel Assistant
+                </span>
+
+                <h1 class="display-3 fw-bold">
+                    Discover Sri Lanka
+                    <span class="text-primary">Smarter</span>
+                </h1>
+
+                <h3 class="text-secondary mb-4">
+                    AI-Powered Tourist Transportation & Travel Planning
+                </h3>
+
+                <p class="lead">
+                    Plan unforgettable journeys across Sri Lanka with intelligent
+                    vehicle recommendations, optimized routes, and accurate
+                    budget estimation—all in one platform.
+                </p>
+
+                <div class="mt-4 mb-4">
+
+                    <p>✅ AI Vehicle Recommendation</p>
+
+                    <p>✅ Smart Budget Prediction</p>
+
+                    <p>✅ Optimized Route Planning</p>
+
+                </div>
+
+                <div class="d-flex gap-3 flex-wrap">
+
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Start Planning
+                    </a>
+
+                    <a href="#" class="btn btn-outline-primary btn-lg">
+                        Explore Destinations
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Right Content -->
+        <div class="col-lg-6 text-center">
+
+            <img src="~/images/hero/hero.ong.png"
+                  alt="Sri Lanka Landscape"
+                  class="img-fluid hero-image" />
+
+         </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AI Trip Planner Section -->
+
+<section class="trip-planner-section">
+
+    <div class="container">
+
+        <div class="trip-planner-card">
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    Plan Your Journey with AI
+                </h2>
+
+                <p class="text-muted">
+                    Let AI recommend the best transportation, budget, and route for your trip.
+                </p>
+
+            </div>
+
+            <form asp-controller="Trip"
+                  asp-action="Plan"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <div class="row g-3">
+
+                    <!-- Start Location -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Starting Location</label>
+
+                        <select name="StartLocation"
+                                class="form-select"
+                                required>
+
+                            <option value="">Select Starting Location</option>
+
+                            <option value="Colombo">Colombo</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Negombo">Negombo</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
+                            <option value="Sigiriya">Sigiriya</option>
+                            <option value="Ella">Ella</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Destination -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Destination</label>
+
+                        <select name="Destination"
+                                class="form-select"
+                                required>
+
+                            <option value="">Select Destination</option>
+
+                            <option value="Ella">Ella</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Sigiriya">Sigiriya</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Negombo">Negombo</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Travel Date -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Travel Date</label>
+
+                        <input type="date"
+                               name="TravelDate"
+                               class="form-control"
+                               required />
+
+                    </div>
+
+
+                    <!-- Travellers -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Travellers</label>
+
+                        <input type="number"
+                               name="Travellers"
+                               class="form-control"
+                               value="2"
+                               min="1"
+                               max="50"
+                               required />
+
+                    </div>
+
+
+                    <!-- Budget -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Budget (LKR)</label>
+
+                        <input type="number"
+                               name="Budget"
+                               class="form-control"
+                               placeholder="Enter budget"
+                               min="1"
+                               required />
+
+                    </div>
+
+
+                    <!-- Travel Duration -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Travel Duration</label>
+
+                        <select name="TravelDurationDays"
+                                class="form-select"
+                                required>
+
+                            <option value="">Select Days</option>
+
+                            <option value="1">1 Day</option>
+                            <option value="2">2 Days</option>
+                            <option value="3">3 Days</option>
+                            <option value="4">4 Days</option>
+                            <option value="5">5 Days</option>
+                            <option value="7">7 Days</option>
+                            <option value="10">10 Days</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Luggage Size -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Luggage Size</label>
+
+                        <select name="LuggageSize"
+                                class="form-select"
+                                required>
+
+                            <option value="">Select Luggage Size</option>
+
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Terrain Type -->
+                    <div class="col-md-3">
+
+                        <label class="form-label">Terrain Type</label>
+
+                        <select name="TerrainType"
+                                class="form-select"
+                                required>
+
+                            <option value="">Select Terrain</option>
+
+                            <option value="Flat">Flat</option>
+                            <option value="Hilly">Hilly</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="Mixed">Mixed</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Plan Trip Button -->
+                    <div class="col-md-3 d-grid">
+
+                        <label class="form-label">&nbsp;</label>
+
+                        <button type="submit"
+                                class="btn btn-primary">
+
+                            Plan Trip
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Why Choose Us Section -->
+
+<section class="features-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Why Choose Our AI Travel System?
+            </h2>
+
+            <p class="text-muted">
+                Experience smarter and easier travel planning with
+                artificial intelligence.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card text-center">
+
+                    <div class="feature-icon">
+                        🤖
+                    </div>
+
+                    <h5>
+                        AI Vehicle Recommendation
+                    </h5>
+
+                    <p>
+                        Get personalized vehicle suggestions
+                        based on your travel requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card text-center">
+
+                    <div class="feature-icon">
+                        💰
+                    </div>
+
+                    <h5>
+                        Budget Estimation
+                    </h5>
+
+                    <p>
+                        Predict your travel expenses before
+                        starting your journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card text-center">
+
+                    <div class="feature-icon">
+                        🗺️
+                    </div>
+
+                    <h5>
+                        Route Optimization
+                    </h5>
+
+                    <p>
+                        Find efficient routes to save
+                        time and distance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card text-center">
+
+                    <div class="feature-icon">
+                        🚗
+                    </div>
+
+                    <h5>
+                        Easy Booking
+                    </h5>
+
+                    <p>
+                        Connect with vehicle providers
+                        and book easily.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Popular Destinations Section -->
+
+<section class="destinations-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Popular Destinations in Sri Lanka
+            </h2>
+
+            <p class="text-muted">
+                Discover beautiful places with AI-powered travel planning.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="~/images/destinations/ella.png"
+                             alt="Ella"
+                             class="img-fluid w-100"
+                             style="height: 200px; object-fit: cover;" />
+                    </div>
+
+                    <div class="p-3">
+
+                        <h5>
+                            Ella
+                        </h5>
+
+                        <p>
+                            Mountains, waterfalls and scenic train journeys.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="~/images/destinations/kandy.png"
+                             alt="Kandy"
+                             class="img-fluid w-100"
+                             style="height: 200px; object-fit: cover;" />
+                    </div>
+
+                    <div class="p-3">
+
+                        <h5>
+                            Kandy
+                        </h5>
+
+                        <p>
+                            Cultural capital with historic attractions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="~/images/destinations/mirissa.jpg"
+                             alt="Mirissa"
+                             class="img-fluid w-100"
+                             style="height: 200px; object-fit: cover;" />
+                    </div>
+
+                    <div class="p-3">
+
+                        <h5>
+                            Mirissa
+                        </h5>
+
+                        <p>
+                            Beautiful beaches and ocean experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="~/images/destinations/sigiriya.png"
+                             alt="Sigiriya"
+                             class="img-fluid w-100"
+                             style="height: 200px; object-fit: cover;" />
+                    </div>
+
+                    <div class="p-3">
+
+                        <h5>
+                            Sigiriya
+                        </h5>
+
+                        <p>
+                            Ancient rock fortress and heritage site.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>

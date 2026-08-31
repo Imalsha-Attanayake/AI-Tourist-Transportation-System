@@ -1,0 +1,501 @@
+Passengers,Budget_LKR,Travel_Duration_Days,Luggage_Size,Terrain_Type,Vehicle_Type
+11,153692,8,Small,Wildlife,Mini Bus
+15,245647,4,Medium,Wildlife,Mini Bus
+10,177382,8,Medium,Wildlife,Van
+5,59926,4,Large,Beach,SUV
+15,327045,9,Large,Beach,Mini Bus
+10,173426,4,Medium,Mixed,Van
+14,289005,9,Medium,Mountain,Mini Bus
+3,71406,6,Small,Beach,Car
+4,97552,8,Small,Wildlife,SUV
+9,216481,10,Large,Mountain,Van
+15,328673,8,Small,Mountain,Mini Bus
+6,68701,5,Large,City,SUV
+7,89516,7,Small,City,Van
+9,175737,3,Small,Wildlife,Van
+10,128972,9,Large,Mountain,Van
+9,139364,4,Large,City,Van
+14,161015,3,Small,Mountain,Mini Bus
+3,55616,4,Large,Mixed,Car
+9,202727,8,Large,Wildlife,Van
+15,202606,1,Large,Mountain,Mini Bus
+5,96847,9,Large,Beach,SUV
+11,115213,6,Small,Mountain,Mini Bus
+15,279343,4,Small,Beach,Mini Bus
+10,237930,10,Medium,City,Van
+7,126475,10,Large,Wildlife,Van
+5,74562,9,Large,City,SUV
+1,19445,3,Large,Mountain,Tuk Tuk
+5,106282,4,Small,Mixed,SUV
+5,104738,6,Small,Beach,SUV
+12,123800,8,Small,Beach,Mini Bus
+13,250844,2,Medium,City,Mini Bus
+11,147301,4,Small,Mixed,Mini Bus
+11,153724,7,Small,Beach,Mini Bus
+1,14464,2,Medium,Beach,Tuk Tuk
+7,119448,9,Large,City,Van
+2,35694,1,Medium,Wildlife,Tuk Tuk
+7,83274,8,Medium,Wildlife,Van
+9,119977,5,Small,City,Van
+15,224090,2,Medium,Beach,Mini Bus
+12,202728,10,Small,Wildlife,Mini Bus
+14,209580,8,Medium,City,Mini Bus
+5,90536,8,Small,Mixed,SUV
+11,127594,2,Small,Mixed,Mini Bus
+6,110849,7,Small,Beach,SUV
+4,52502,2,Medium,Beach,Car
+6,113075,1,Small,Beach,SUV
+7,127278,5,Large,Mixed,Van
+2,46326,4,Large,Mixed,Car
+13,214652,6,Large,Mixed,Mini Bus
+10,169530,2,Small,Mixed,Van
+15,190193,4,Small,Mixed,Mini Bus
+11,232805,7,Small,Wildlife,Mini Bus
+1,25753,2,Medium,City,Tuk Tuk
+6,100692,4,Medium,Mountain,SUV
+4,47804,4,Medium,Mountain,Car
+14,182398,10,Large,Wildlife,Mini Bus
+8,154371,1,Small,City,Van
+1,42254,9,Medium,Mixed,Car
+11,226354,9,Medium,Beach,Mini Bus
+2,48231,7,Small,Wildlife,Car
+7,137126,9,Large,Beach,Van
+13,235265,5,Small,Mountain,Mini Bus
+2,48718,8,Large,Mountain,Car
+7,87964,6,Medium,Mountain,Van
+15,230625,10,Medium,Mixed,Mini Bus
+3,42355,7,Small,City,Car
+6,145420,10,Large,Mixed,SUV
+2,55855,7,Medium,Mountain,Car
+12,129485,1,Small,Beach,Mini Bus
+9,196621,8,Small,Mixed,Van
+1,46988,7,Small,Mountain,Car
+8,189456,8,Medium,Mountain,Van
+13,184347,8,Small,Beach,Mini Bus
+10,138366,1,Large,City,Van
+10,210114,8,Small,City,Van
+12,213429,7,Medium,Wildlife,Mini Bus
+14,171248,6,Large,City,Mini Bus
+15,231560,5,Large,Beach,Mini Bus
+5,50092,2,Large,Wildlife,SUV
+5,111084,3,Large,Beach,SUV
+5,129740,10,Large,Beach,SUV
+5,87172,7,Small,Mountain,SUV
+10,139452,6,Large,City,Van
+8,154452,10,Large,Wildlife,Van
+3,67535,5,Large,City,Car
+7,105154,1,Large,Mixed,Van
+13,192404,6,Small,Wildlife,Mini Bus
+11,223161,1,Large,City,Mini Bus
+4,85510,5,Large,Mixed,SUV
+10,201202,1,Small,Wildlife,Van
+5,91775,5,Large,Mountain,SUV
+9,209265,10,Small,City,Van
+4,106205,9,Small,City,SUV
+11,162291,9,Small,Mountain,Mini Bus
+13,217024,5,Medium,Beach,Mini Bus
+4,96582,10,Large,City,SUV
+1,17298,2,Large,Mountain,Tuk Tuk
+2,53922,9,Small,Wildlife,Car
+2,31108,2,Large,Mountain,Tuk Tuk
+7,131547,6,Large,Mixed,Van
+5,102115,2,Medium,City,SUV
+9,137331,3,Medium,Wildlife,Van
+10,163985,7,Small,Mountain,Van
+7,133567,6,Large,Beach,Van
+15,192245,10,Large,Beach,Mini Bus
+5,100459,1,Small,Wildlife,SUV
+2,31848,3,Large,Mountain,Tuk Tuk
+1,44558,9,Small,Beach,Car
+9,106376,7,Medium,Mountain,Van
+11,133577,3,Large,Mountain,Mini Bus
+4,72094,2,Large,Mixed,Car
+5,82889,2,Medium,Beach,SUV
+7,144785,10,Small,Mixed,Van
+5,68667,7,Small,Mixed,SUV
+8,121320,4,Small,Wildlife,Van
+5,55025,2,Small,City,SUV
+13,184521,6,Medium,Wildlife,Mini Bus
+1,37783,8,Small,Wildlife,Tuk Tuk
+12,255302,10,Small,Mixed,Mini Bus
+14,257255,9,Medium,City,Mini Bus
+15,293388,3,Medium,Mountain,Mini Bus
+7,159745,6,Medium,Beach,Van
+5,83097,6,Medium,Mixed,SUV
+14,153156,2,Small,Mountain,Mini Bus
+4,64036,6,Medium,Wildlife,Car
+1,31601,6,Medium,Wildlife,Tuk Tuk
+7,107068,8,Small,Wildlife,Van
+10,97935,5,Large,City,Van
+4,109260,8,Small,Wildlife,SUV
+4,113754,10,Small,Mountain,SUV
+3,72954,8,Medium,City,Car
+2,40730,2,Medium,Wildlife,Car
+3,64560,9,Small,Mountain,Car
+4,89500,4,Large,City,SUV
+14,225400,3,Large,Mixed,Mini Bus
+4,78474,6,Small,Wildlife,Car
+6,95319,7,Large,City,SUV
+14,172647,3,Small,Mixed,Mini Bus
+5,65021,1,Medium,Wildlife,SUV
+4,86612,6,Small,City,SUV
+4,52746,7,Medium,Beach,Car
+6,151204,8,Small,City,SUV
+11,145520,2,Medium,Wildlife,Mini Bus
+12,253044,6,Small,Mixed,Mini Bus
+15,251323,7,Large,City,Mini Bus
+8,134630,2,Medium,Beach,Van
+4,97181,5,Large,Mixed,SUV
+9,193253,4,Large,Mixed,Van
+4,80236,2,Medium,Wildlife,SUV
+6,106592,5,Medium,Mountain,SUV
+15,241297,7,Small,Mixed,Mini Bus
+6,90480,6,Medium,Mountain,SUV
+2,42646,8,Medium,City,Car
+15,303120,9,Large,Mixed,Mini Bus
+1,12138,1,Medium,City,Tuk Tuk
+15,195978,4,Large,City,Mini Bus
+3,68310,9,Large,Wildlife,Car
+11,152708,3,Large,City,Mini Bus
+2,45751,3,Small,Mountain,Car
+6,130321,7,Large,Wildlife,SUV
+9,150894,3,Large,Mountain,Van
+7,90658,4,Small,City,Van
+15,316335,9,Small,Mountain,Mini Bus
+15,211640,5,Small,Beach,Mini Bus
+14,196386,8,Medium,Mountain,Mini Bus
+1,34493,4,Medium,City,Tuk Tuk
+7,74919,5,Medium,Mountain,Van
+7,90393,4,Small,City,Van
+9,199935,9,Medium,City,Van
+1,15609,2,Large,Mountain,Tuk Tuk
+15,272352,8,Large,Beach,Mini Bus
+6,117627,9,Small,Mixed,SUV
+11,171162,9,Large,Mixed,Mini Bus
+10,166924,8,Large,Beach,Van
+8,175342,7,Medium,City,Van
+8,69062,1,Medium,Mixed,Van
+8,99552,6,Small,Mixed,Van
+15,286427,1,Large,Mixed,Mini Bus
+10,212610,7,Large,Mixed,Van
+9,163287,2,Large,Beach,Van
+10,180416,2,Small,City,Van
+2,35418,3,Large,Wildlife,Tuk Tuk
+4,86121,7,Large,Beach,SUV
+5,59555,3,Large,Mixed,SUV
+2,43282,3,Small,Wildlife,Car
+13,223425,10,Large,Mountain,Mini Bus
+15,312030,5,Small,City,Mini Bus
+15,210261,3,Medium,Beach,Mini Bus
+2,29997,3,Large,Wildlife,Tuk Tuk
+13,146785,8,Small,Beach,Mini Bus
+11,244495,7,Small,Beach,Mini Bus
+11,199128,2,Medium,City,Mini Bus
+10,178106,6,Large,Wildlife,Van
+8,154643,9,Large,City,Van
+9,190348,4,Large,Beach,Van
+6,56195,1,Large,Mixed,SUV
+12,254006,10,Large,Beach,Mini Bus
+9,189639,5,Small,City,Van
+1,27912,5,Medium,Wildlife,Tuk Tuk
+4,88391,5,Medium,Mountain,SUV
+13,246115,2,Medium,Mixed,Mini Bus
+13,213206,2,Large,Beach,Mini Bus
+7,123074,8,Small,Mountain,Van
+15,227908,8,Medium,Mountain,Mini Bus
+14,286404,8,Small,Mixed,Mini Bus
+6,66064,2,Medium,City,SUV
+15,252819,6,Small,Mountain,Mini Bus
+1,35763,4,Small,City,Tuk Tuk
+4,80185,3,Large,Beach,SUV
+14,188384,8,Medium,Beach,Mini Bus
+6,64028,4,Large,Wildlife,SUV
+12,202106,7,Medium,Mixed,Mini Bus
+13,158453,7,Small,Mountain,Mini Bus
+6,105459,9,Medium,City,SUV
+14,128677,1,Medium,Mixed,Mini Bus
+6,127253,5,Small,City,SUV
+5,101710,5,Medium,Wildlife,SUV
+9,130209,3,Large,Mixed,Van
+3,60253,8,Medium,Wildlife,Car
+13,119514,1,Large,Wildlife,Mini Bus
+3,54249,3,Small,City,Car
+14,166916,9,Small,Mixed,Mini Bus
+8,77926,2,Large,Mountain,Van
+8,119160,4,Small,Mountain,Van
+6,119220,2,Small,Beach,SUV
+7,85852,1,Large,City,Van
+14,125564,2,Medium,City,Mini Bus
+7,102999,5,Small,Mixed,Van
+12,153661,5,Large,Mountain,Mini Bus
+2,74280,10,Small,Beach,Car
+6,107664,9,Large,Wildlife,SUV
+8,153356,9,Small,Beach,Van
+12,228258,9,Small,Mixed,Mini Bus
+13,178475,2,Large,Mixed,Mini Bus
+12,213716,8,Large,Wildlife,Mini Bus
+3,58731,1,Small,Mountain,Car
+13,219450,10,Small,Mountain,Mini Bus
+7,138782,2,Large,Wildlife,Van
+10,113333,9,Small,Mountain,Van
+4,62314,10,Small,Mixed,Car
+6,70632,6,Large,Mountain,SUV
+6,147496,10,Medium,Mixed,SUV
+3,45628,1,Medium,Mountain,Car
+2,47298,7,Medium,Beach,Car
+15,216013,7,Medium,Mountain,Mini Bus
+14,227300,6,Medium,Mixed,Mini Bus
+2,60134,10,Medium,City,Car
+11,204625,7,Medium,Wildlife,Mini Bus
+6,85444,7,Medium,Mountain,SUV
+15,194944,4,Small,Wildlife,Mini Bus
+15,257637,4,Large,City,Mini Bus
+4,62314,9,Medium,City,Car
+15,206710,1,Large,Mixed,Mini Bus
+2,38301,1,Small,Mountain,Tuk Tuk
+3,85949,7,Medium,Beach,SUV
+8,93536,4,Large,City,Van
+4,105612,7,Small,Mixed,SUV
+10,133535,5,Small,Mountain,Van
+11,109281,1,Large,Mixed,Mini Bus
+2,43486,8,Medium,City,Car
+4,97580,6,Medium,Beach,SUV
+5,82030,4,Small,Mountain,SUV
+13,232698,7,Medium,City,Mini Bus
+14,207776,2,Small,Wildlife,Mini Bus
+1,19788,1,Medium,City,Tuk Tuk
+15,297255,4,Large,Wildlife,Mini Bus
+2,42607,3,Large,Wildlife,Car
+6,93232,1,Large,City,SUV
+11,237355,10,Large,Wildlife,Mini Bus
+1,37787,7,Large,Wildlife,Tuk Tuk
+14,229339,9,Large,City,Mini Bus
+2,54520,8,Medium,Mountain,Car
+10,161693,1,Small,Mountain,Van
+8,114220,4,Medium,Wildlife,Van
+2,28094,3,Large,Mountain,Tuk Tuk
+12,212445,3,Large,Beach,Mini Bus
+4,90944,6,Medium,Mountain,SUV
+10,219460,10,Large,Mountain,Van
+11,169374,3,Medium,City,Mini Bus
+7,114323,4,Small,Beach,Van
+12,205553,1,Small,Wildlife,Mini Bus
+8,141394,2,Small,Mountain,Van
+12,270997,7,Small,Wildlife,Mini Bus
+2,37500,6,Small,Wildlife,Tuk Tuk
+11,157258,3,Large,Beach,Mini Bus
+11,174800,10,Large,Wildlife,Mini Bus
+12,246744,8,Large,City,Mini Bus
+12,254253,7,Small,Mountain,Mini Bus
+3,75518,8,Medium,Beach,Car
+10,144562,4,Medium,City,Van
+11,181596,3,Small,Beach,Mini Bus
+2,65414,8,Large,Wildlife,Car
+6,128685,3,Small,Mixed,SUV
+5,140647,9,Large,Mountain,SUV
+2,44631,3,Small,Mountain,Car
+13,226670,6,Small,Wildlife,Mini Bus
+7,96919,8,Medium,Beach,Van
+15,207235,5,Medium,Wildlife,Mini Bus
+7,140089,5,Large,City,Van
+14,204637,5,Small,Mountain,Mini Bus
+1,39992,9,Small,Wildlife,Tuk Tuk
+14,140710,2,Large,Wildlife,Mini Bus
+7,82160,6,Medium,Wildlife,Van
+15,313515,9,Small,City,Mini Bus
+10,208070,5,Medium,City,Van
+2,55542,7,Small,Mixed,Car
+11,134237,9,Large,City,Mini Bus
+6,77384,2,Medium,Wildlife,SUV
+11,160123,8,Medium,Mountain,Mini Bus
+3,72756,3,Large,Beach,Car
+1,34766,6,Medium,Mixed,Tuk Tuk
+5,49083,2,Small,Mixed,SUV
+11,148192,3,Small,Mountain,Mini Bus
+9,102043,4,Medium,City,Van
+8,82280,4,Large,Mixed,Van
+12,177490,1,Large,City,Mini Bus
+8,76501,3,Large,Mixed,Van
+15,268403,7,Medium,Mountain,Mini Bus
+8,127564,2,Small,Mountain,Van
+3,63475,4,Medium,Wildlife,Car
+4,77964,6,Small,Mixed,Car
+5,98757,9,Small,Beach,SUV
+1,43731,6,Large,Mountain,Car
+12,152352,7,Large,City,Mini Bus
+15,226555,5,Medium,City,Mini Bus
+10,119808,8,Medium,Mixed,Van
+14,194172,8,Small,City,Mini Bus
+11,199947,7,Small,Mixed,Mini Bus
+12,201476,7,Medium,Beach,Mini Bus
+3,44076,6,Medium,Mountain,Car
+3,68721,9,Small,Wildlife,Car
+7,100647,4,Small,Wildlife,Van
+2,53761,7,Medium,City,Car
+14,304970,9,Medium,City,Mini Bus
+1,28075,3,Large,City,Tuk Tuk
+2,37382,6,Medium,Mixed,Tuk Tuk
+12,187416,3,Small,Mixed,Mini Bus
+1,40258,9,Medium,Wildlife,Car
+1,34973,10,Medium,Beach,Tuk Tuk
+11,121007,1,Medium,City,Mini Bus
+14,207896,3,Medium,Wildlife,Mini Bus
+6,142304,7,Large,Mixed,SUV
+4,86634,10,Small,City,SUV
+3,44922,4,Large,City,Car
+6,145870,7,Medium,Mixed,SUV
+12,151827,5,Medium,Mountain,Mini Bus
+8,141651,7,Large,Wildlife,Van
+11,159863,9,Medium,City,Mini Bus
+4,100808,8,Large,Mountain,SUV
+15,176463,9,Medium,City,Mini Bus
+15,296222,8,Large,Beach,Mini Bus
+2,32861,1,Large,Wildlife,Tuk Tuk
+9,102137,1,Small,City,Van
+14,177976,10,Medium,Mountain,Mini Bus
+14,220801,7,Large,Beach,Mini Bus
+5,91035,7,Large,City,SUV
+5,92089,9,Small,Wildlife,SUV
+8,186028,9,Medium,City,Van
+1,43459,6,Medium,Mountain,Car
+1,57411,9,Medium,Mixed,Car
+10,108205,5,Small,Beach,Van
+11,213947,1,Medium,Beach,Mini Bus
+10,237680,10,Small,City,Van
+5,50576,1,Large,Mountain,SUV
+8,125420,6,Small,Wildlife,Van
+4,64644,8,Large,Mixed,Car
+10,162485,7,Medium,Beach,Van
+8,131320,8,Large,Mixed,Van
+7,117264,7,Large,Beach,Van
+14,202685,1,Medium,Wildlife,Mini Bus
+13,227422,9,Medium,Mountain,Mini Bus
+7,109289,3,Medium,Wildlife,Van
+3,73834,7,Medium,Wildlife,Car
+5,74174,6,Small,Mountain,SUV
+15,227302,4,Small,Wildlife,Mini Bus
+6,76401,3,Medium,Mixed,SUV
+6,115019,7,Large,Wildlife,SUV
+15,256717,7,Medium,Mixed,Mini Bus
+13,254090,9,Medium,Beach,Mini Bus
+7,126717,6,Small,Mountain,Van
+4,51506,9,Large,Wildlife,Car
+5,110145,7,Medium,Mountain,SUV
+9,153066,7,Large,City,Van
+2,50421,7,Medium,Wildlife,Car
+7,147567,7,Small,Mixed,Van
+2,53866,7,Small,Mountain,Car
+7,68226,3,Large,Mixed,Van
+4,67448,4,Small,City,Car
+1,36936,7,Large,Mixed,Tuk Tuk
+7,59025,1,Medium,Mountain,Van
+11,180556,6,Medium,Beach,Mini Bus
+4,67000,4,Small,City,Car
+7,74311,1,Small,Mountain,Van
+1,20737,3,Small,Mixed,Tuk Tuk
+3,51889,2,Large,Mountain,Car
+7,143780,9,Large,Wildlife,Van
+8,90454,6,Large,City,Van
+3,54582,9,Small,Beach,Car
+13,158953,2,Medium,Mountain,Mini Bus
+4,107766,10,Small,Wildlife,SUV
+5,60401,1,Large,Mixed,SUV
+10,107744,3,Large,Mountain,Van
+8,151642,6,Small,City,Van
+7,124572,10,Medium,Wildlife,Van
+1,41812,8,Medium,Mixed,Car
+13,225675,3,Small,Mountain,Mini Bus
+10,230068,8,Medium,Mixed,Van
+3,69918,9,Large,Beach,Car
+12,152217,7,Medium,Mixed,Mini Bus
+1,21789,2,Large,Beach,Tuk Tuk
+15,291523,8,Medium,Mountain,Mini Bus
+12,202366,2,Medium,Mixed,Mini Bus
+9,141498,9,Large,Mixed,Van
+3,66610,8,Small,City,Car
+9,168820,1,Large,City,Van
+10,194956,4,Small,Beach,Van
+3,82037,8,Medium,Mixed,SUV
+7,103851,3,Large,Mixed,Van
+9,111417,3,Small,Mixed,Van
+13,260686,1,Large,Mixed,Mini Bus
+7,142162,2,Small,City,Van
+12,170397,9,Medium,Mountain,Mini Bus
+13,204360,10,Small,Beach,Mini Bus
+4,58768,6,Large,Mixed,Car
+12,147389,5,Medium,City,Mini Bus
+12,142476,8,Large,City,Mini Bus
+13,197021,10,Small,Wildlife,Mini Bus
+11,234407,4,Small,Mountain,Mini Bus
+8,81744,4,Large,Wildlife,Van
+15,256476,8,Medium,Mixed,Mini Bus
+12,155994,9,Large,City,Mini Bus
+13,188908,10,Medium,Mixed,Mini Bus
+7,130750,3,Medium,Beach,Van
+1,23262,2,Medium,Beach,Tuk Tuk
+7,139473,5,Medium,Mountain,Van
+11,205840,10,Medium,City,Mini Bus
+10,203256,3,Small,Mixed,Van
+10,150646,9,Small,Beach,Van
+9,187224,3,Small,Wildlife,Van
+1,19346,3,Small,City,Tuk Tuk
+15,230694,8,Small,Mixed,Mini Bus
+13,211083,10,Large,Beach,Mini Bus
+3,75345,8,Small,Mixed,Car
+15,172936,4,Large,City,Mini Bus
+9,166003,5,Large,Mixed,Van
+9,179192,10,Large,Wildlife,Van
+5,63287,8,Large,Mixed,SUV
+6,102942,6,Medium,Mixed,SUV
+2,57244,9,Large,Wildlife,Car
+14,298232,6,Large,Wildlife,Mini Bus
+15,243795,5,Large,City,Mini Bus
+15,228759,6,Large,Beach,Mini Bus
+12,226722,3,Small,Mixed,Mini Bus
+9,117567,7,Medium,Beach,Van
+7,141444,5,Small,Mountain,Van
+8,92030,6,Large,Mixed,Van
+14,270086,2,Medium,City,Mini Bus
+13,253157,2,Medium,Mountain,Mini Bus
+9,189052,10,Large,Mountain,Van
+12,226340,1,Medium,Wildlife,Mini Bus
+4,59566,2,Large,Mixed,Car
+4,89929,7,Large,Wildlife,SUV
+12,177944,10,Small,Mountain,Mini Bus
+3,73555,7,Large,Mixed,Car
+15,259645,8,Medium,Wildlife,Mini Bus
+7,147982,8,Large,Mixed,Van
+11,170876,4,Large,Wildlife,Mini Bus
+4,77754,1,Large,Wildlife,Car
+14,154098,7,Small,Mountain,Mini Bus
+14,140073,5,Large,Mixed,Mini Bus
+7,82866,7,Small,Wildlife,Van
+4,47821,1,Medium,Mixed,Car
+7,80614,2,Medium,Wildlife,Van
+6,109110,9,Medium,Mountain,SUV
+15,295327,4,Medium,Beach,Mini Bus
+14,148051,1,Large,Beach,Mini Bus
+3,52393,1,Large,Beach,Car
+4,74037,9,Large,City,Car
+3,79535,5,Small,Beach,Car
+7,132601,9,Small,City,Van
+4,41060,1,Large,Mountain,Car
+11,204921,1,Medium,Wildlife,Mini Bus
+9,158471,7,Large,Mixed,Van
+10,216951,9,Large,City,Van
+5,71654,2,Medium,City,SUV
+11,146326,9,Large,Beach,Mini Bus
+8,155534,10,Medium,City,Van
+3,41630,1,Small,Beach,Car
+1,31584,4,Medium,Mountain,Tuk Tuk
+9,96531,1,Small,Beach,Van
+10,169496,6,Large,Mixed,Van
+5,48591,2,Medium,Mixed,SUV
+7,81074,5,Medium,Mixed,Van
+1,21319,1,Medium,City,Tuk Tuk
+5,87792,4,Large,Mountain,SUV
+2,46245,5,Medium,Mixed,Car
+15,288520,5,Large,Mountain,Mini Bus
+15,195318,7,Medium,Mountain,Mini Bus
+11,214315,6,Medium,Mountain,Mini Bus
+2,46400,2,Medium,City,Car

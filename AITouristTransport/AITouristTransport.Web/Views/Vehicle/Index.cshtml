@@ -1,0 +1,655 @@
+﻿@model IEnumerable<AITouristTransport.Web.Models.Vehicle>
+
+@{
+    ViewData["Title"] = "Vehicles";
+}
+
+<style>
+    .vehicle-page {
+        background: #f5f8fc;
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-bottom: -20px;
+        padding-bottom: 60px;
+    }
+
+    .vehicle-hero {
+        background: linear-gradient(rgba(15, 35, 55, 0.75), rgba(15, 35, 55, 0.75)), url('/images/vehicles/vehicle-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .vehicle-hero-content {
+        width: 100%;
+        padding: 45px 0;
+    }
+
+    .vehicle-hero h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .vehicle-hero p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .vehicle-search {
+        max-width: 500px;
+    }
+
+        .vehicle-search input {
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            padding: 0 22px;
+            font-size: 15px;
+        }
+
+    .vehicle-content {
+        padding-top: 35px;
+    }
+
+    .vehicle-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        border: none;
+        background: white;
+        color: #333;
+        border-radius: 25px;
+        padding: 10px 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #0d6efd;
+            color: white;
+        }
+
+    .sort-select {
+        border: none;
+        background: white;
+        border-radius: 10px;
+        padding: 10px 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .vehicle-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        height: 100%;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+        }
+
+    .vehicle-image-container {
+        height: 220px;
+        background: linear-gradient(135deg, #e8f1f8, #d7e5f0);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vehicle-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .vehicle-no-image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #6c7a89;
+        font-size: 15px;
+        background: linear-gradient(135deg, #e8f1f8, #d7e5f0);
+    }
+
+        .vehicle-no-image::before {
+            content: "🚗";
+            font-size: 45px;
+            margin-bottom: 10px;
+            opacity: 0.65;
+        }
+
+    .vehicle-type-badge {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #0d6efd;
+        color: white;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .vehicle-card-body {
+        padding: 20px;
+    }
+
+    .vehicle-name {
+        font-size: 21px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #172033;
+    }
+
+    .vehicle-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        color: #555;
+        font-size: 14px;
+    }
+
+    .vehicle-info-item {
+        text-align: center;
+    }
+
+        .vehicle-info-item strong {
+            display: block;
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+    .vehicle-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+
+    .vehicle-price {
+        color: #0d6efd;
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+    .vehicle-actions {
+        display: flex;
+        gap: 5px;
+    }
+
+    .empty-vehicles {
+        background: white;
+        border-radius: 15px;
+        padding: 50px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    @@media (max-width: 768px) {
+        .vehicle-hero h1 {
+            font-size: 32px;
+        }
+
+        .vehicle-controls {
+            align-items: stretch;
+        }
+
+        .sort-select {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="vehicle-page">
+
+    <!-- ========================= -->
+    <!-- VEHICLE HERO SECTION -->
+    <!-- ========================= -->
+
+    <section class="vehicle-hero">
+
+        <div class="container vehicle-hero-content">
+
+            <div class="row">
+
+                <div class="col-lg-7">
+
+                    <div class="mb-2 text-primary fw-bold">
+                        OUR FLEET
+                    </div>
+
+                    <h1>
+                        Explore Our Vehicles
+                    </h1>
+
+                    <p>
+                        Find the perfect vehicle for your Sri Lankan adventure.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-5 d-flex align-items-center">
+
+                    <div class="vehicle-search w-100">
+
+                        <input type="text"
+                               id="vehicleSearch"
+                               class="form-control"
+                               placeholder="Search vehicles..." />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- VEHICLE CONTENT -->
+    <!-- ========================= -->
+
+    <div class="container vehicle-content">
+
+        <!-- Filters -->
+
+        <div class="vehicle-controls">
+
+            <div class="filter-buttons">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All Vehicles
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="Car">
+                    Car
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="Van">
+                    Van
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="SUV">
+                    SUV
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="Mini Bus">
+                    Mini Bus
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="Bus">
+                    Bus
+                </button>
+
+            </div>
+
+
+            <!-- Sorting -->
+
+            <select id="vehicleSort"
+                    class="sort-select">
+
+                <option value="default">
+                    Sort by: Default
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="name">
+                    Name: A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+
+        @if (!Model.Any())
+        {
+            <div class="empty-vehicles">
+
+                <h4>No vehicles available</h4>
+
+                <p class="text-muted mb-0">
+                    No vehicles have been added yet.
+                </p>
+
+            </div>
+        }
+        else
+        {
+            <!-- ========================= -->
+            <!-- VEHICLE CARDS -->
+            <!-- ========================= -->
+
+            <div class="row g-4"
+                 id="vehicleGrid">
+
+                @foreach (var vehicle in Model)
+                {
+                    <div class="col-lg-4 col-md-6 vehicle-item"
+                         data-name="@vehicle.VehicleName.ToLower()"
+                         data-type="@vehicle.VehicleType"
+                         data-price="@vehicle.PricePerDay">
+
+                        <div class="vehicle-card">
+
+                            <!-- Image -->
+
+                            <div class="vehicle-image-container">
+
+                                @if (!string.IsNullOrEmpty(vehicle.ImageUrl))
+                                {
+                                    <img src="@vehicle.ImageUrl"
+                                         alt="@vehicle.VehicleName"
+                                         class="vehicle-image" />
+                                }
+                                else
+                                {
+                                    <div class="vehicle-no-image">
+                                        No image available
+                                    </div>
+                                }
+
+                                <span class="vehicle-type-badge">
+                                    @vehicle.VehicleType
+                                </span>
+
+                            </div>
+
+
+                            <!-- Card Body -->
+
+                            <div class="vehicle-card-body">
+
+                                <div class="vehicle-name">
+                                    @vehicle.VehicleName
+                                </div>
+
+
+                                <div class="vehicle-info">
+
+                                    <div class="vehicle-info-item">
+
+                                        <strong>
+                                            @vehicle.SeatCapacity
+                                        </strong>
+
+                                        Seats
+
+                                    </div>
+
+                                    <div class="vehicle-info-item">
+
+                                        <strong>
+                                            @vehicle.VehicleType
+                                        </strong>
+
+                                        Type
+
+                                    </div>
+
+                                    <div class="vehicle-info-item">
+
+                                        <strong>
+                                            Rs. @vehicle.PricePerDay.ToString("N0")
+                                        </strong>
+
+                                        / day
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Price / Actions -->
+
+                                <div class="vehicle-bottom">
+
+                                    <div class="vehicle-price">
+                                        Rs. @vehicle.PricePerDay.ToString("N0")
+                                        <small>/ day</small>
+                                    </div>
+
+
+                                    <div class="vehicle-actions">
+
+                                        @if (User.IsInRole("VehicleProvider"))
+                                        {
+                                            <a asp-action="Edit"
+                                               asp-route-id="@vehicle.VehicleId"
+                                               class="btn btn-primary btn-sm">
+                                                Edit
+                                            </a>
+
+                                            <a asp-action="Delete"
+                                               asp-route-id="@vehicle.VehicleId"
+                                               class="btn btn-danger btn-sm">
+                                                Delete
+                                            </a>
+                                        }
+
+                                        @if (User.IsInRole("Tourist"))
+                                        {
+                                            <a asp-controller="Booking"
+                                               asp-action="Create"
+                                               asp-route-vehicleId="@vehicle.VehicleId"
+                                               class="btn btn-success btn-sm">
+                                                Book Now
+                                            </a>
+                                        }
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        }
+
+    </div>
+
+</div>
+
+
+@section Scripts {
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const searchInput =
+                document.getElementById("vehicleSearch");
+
+            const filterButtons =
+                document.querySelectorAll(".filter-btn");
+
+            const sortSelect =
+                document.getElementById("vehicleSort");
+
+            const vehicleGrid =
+                document.getElementById("vehicleGrid");
+
+            let currentFilter = "all";
+
+
+            function updateVehicles() {
+
+                const searchText =
+                    searchInput.value.toLowerCase();
+
+                const vehicles =
+                    Array.from(
+                        vehicleGrid.querySelectorAll(".vehicle-item")
+                    );
+
+
+                // Filter vehicles
+
+                vehicles.forEach(function (vehicle) {
+
+                    const name =
+                        vehicle.dataset.name;
+
+                    const type =
+                        vehicle.dataset.type;
+
+                    const matchesSearch =
+                        name.includes(searchText);
+
+                    const matchesFilter =
+                        currentFilter === "all" ||
+                        type === currentFilter;
+
+                    if (matchesSearch && matchesFilter) {
+
+                        vehicle.style.display = "";
+
+                    }
+                    else {
+
+                        vehicle.style.display = "none";
+
+                    }
+
+                });
+
+
+                // Sort vehicles
+
+                const sortValue =
+                    sortSelect.value;
+
+                vehicles.sort(function (a, b) {
+
+                    if (sortValue === "low") {
+
+                        return parseFloat(a.dataset.price)
+                            - parseFloat(b.dataset.price);
+
+                    }
+
+                    if (sortValue === "high") {
+
+                        return parseFloat(b.dataset.price)
+                            - parseFloat(a.dataset.price);
+
+                    }
+
+                    if (sortValue === "name") {
+
+                        return a.dataset.name
+                            .localeCompare(b.dataset.name);
+
+                    }
+
+                    return 0;
+
+                });
+
+
+                vehicles.forEach(function (vehicle) {
+
+                    vehicleGrid.appendChild(vehicle);
+
+                });
+
+            }
+
+
+            // Search
+
+            searchInput.addEventListener(
+                "input",
+                updateVehicles
+            );
+
+
+            // Filters
+
+            filterButtons.forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        filterButtons.forEach(function (btn) {
+
+                            btn.classList.remove("active");
+
+                        });
+
+                        button.classList.add("active");
+
+                        currentFilter =
+                            button.dataset.filter;
+
+                        updateVehicles();
+
+                    }
+                );
+
+            });
+
+
+            // Sorting
+
+            sortSelect.addEventListener(
+                "change",
+                updateVehicles
+            );
+
+        });
+
+    </script>
+}

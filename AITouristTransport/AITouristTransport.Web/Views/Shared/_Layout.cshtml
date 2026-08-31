@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AITouristTransport.Web</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AITouristTransport.Web.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+
+            <div class="container">
+
+                <!-- Website Logo / Brand -->
+
+                <a class="navbar-brand fw-bold"
+                   asp-controller="Home"
+                   asp-action="Index">
+                    TravelAI Lanka
+                </a>
+
+
+                <!-- Mobile Navbar Button -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse"
+                     id="mainNavbar">
+
+
+                    <!-- Main Navigation -->
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <!-- Home -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Index">
+                                Home
+                            </a>
+
+                        </li>
+
+
+                        <!-- Destinations -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Destination"
+                               asp-action="Index">
+                                Destinations
+                            </a>
+
+                        </li>
+
+
+                        <!-- Vehicles -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Vehicle"
+                               asp-action="Index">
+                                Vehicles
+                            </a>
+
+                        </li>
+
+                        <!-- Tourist Booking History -->
+                        @if (User.Identity != null &&
+                                                User.Identity.IsAuthenticated &&
+                                                User.IsInRole("Tourist"))
+                        {
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                   asp-controller="Booking"
+                                   asp-action="History">
+                                    My Bookings
+                                </a>
+
+                            </li>
+                        }
+
+
+                        <!-- About -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               href="#">
+                                About
+                            </a>
+
+                        </li>
+
+
+                        <!-- Contact -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               href="#">
+                                Contact
+                            </a>
+
+                        </li>
+
+
+                        <!-- Vehicle Provider Dashboard -->
+                        @if (User.Identity != null &&
+                                                User.Identity.IsAuthenticated &&
+                                                User.IsInRole("VehicleProvider"))
+                        {
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                   asp-controller="VehicleProvider"
+                                   asp-action="Index">
+                                    Dashboard
+                                </a>
+
+                            </li>
+                        }
+
+
+                        <!-- Admin Dashboard -->
+                        @if (User.Identity != null &&
+                                                User.Identity.IsAuthenticated &&
+                                                User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+
+                                <a class="nav-link"
+                                   asp-controller="Admin"
+                                   asp-action="Dashboard">
+                                    Admin Dashboard
+                                </a>
+
+                            </li>
+                        }
+
+                    </ul>
+
+
+                    <!-- Login / User Information -->
+
+                    <div class="d-flex align-items-center">
+
+                        @if (User.Identity != null &&
+                                                User.Identity.IsAuthenticated)
+                        {
+                            <span class="me-3 text-white">
+                                Welcome, @User.Identity.Name
+                            </span>
+
+
+                            <!-- Logout -->
+
+                            <form asp-controller="User"
+                                  asp-action="Logout"
+                                  method="post"
+                                  class="d-inline">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit"
+                                        class="btn btn-outline-danger">
+                                    Logout
+                                </button>
+
+                            </form>
+                        }
+                        else
+                        {
+                            <!-- Login -->
+
+                            <a asp-controller="User"
+                               asp-action="Login"
+                               class="btn btn-outline-primary me-2">
+                                Login
+                            </a>
+
+
+                            <!-- Sign Up -->
+
+                            <a asp-controller="User"
+                               asp-action="Register"
+                               class="btn btn-primary">
+                                Sign Up
+                            </a>
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+        <main role="main"
+              class="pb-3">
+
+            @RenderBody()
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="border-top footer text-muted">
+
+        <div class="container">
+
+            &copy; 2026 - AITouristTransport.Web -
+
+            <a asp-area=""
+               asp-controller="Home"
+               asp-action="Privacy">
+                Privacy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Scripts -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true">
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

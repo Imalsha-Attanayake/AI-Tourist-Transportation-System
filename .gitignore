@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Environment and secrets
+.env
+
+# OS files
+Thumbs.db
+Desktop.ini

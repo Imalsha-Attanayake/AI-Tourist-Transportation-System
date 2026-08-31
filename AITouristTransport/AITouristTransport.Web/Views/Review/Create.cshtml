@@ -1,0 +1,153 @@
+﻿@using AITouristTransport.Web.Models
+
+@{
+    ViewData["Title"] = "Submit Review";
+    var booking = ViewBag.Booking as Booking;
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Share Your Experience
+        </h1>
+
+        <p class="text-muted">
+            Tell us about your vehicle booking experience.
+        </p>
+
+    </div>
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4">
+
+                    @if (booking != null)
+                    {
+                        <div class="alert alert-light border mb-4">
+
+                            <h5 class="fw-bold">
+                                Booking #@booking.BookingId
+                            </h5>
+
+                            <p class="mb-1">
+                                <strong>Vehicle:</strong>
+                                @(booking.Vehicle?.VehicleName ?? "Unknown")
+                            </p>
+
+                            <p class="mb-0">
+                                <strong>Route:</strong>
+                                @booking.StartLocation
+                                →
+                                @booking.Destination
+                            </p>
+
+                        </div>
+                    }
+
+
+                    <form asp-action="Create"
+                          asp-controller="Review"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden"
+                               name="BookingId"
+                               value="@booking?.BookingId" />
+
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-bold">
+                                Rating
+                            </label>
+
+                            <select class="form-select"
+                                    name="Rating"
+                                    required>
+
+                                <option value="">
+                                    Select a rating
+                                </option>
+
+                                <option value="5">
+                                    ⭐⭐⭐⭐⭐ Excellent
+                                </option>
+
+                                <option value="4">
+                                    ⭐⭐⭐⭐ Very Good
+                                </option>
+
+                                <option value="3">
+                                    ⭐⭐⭐ Good
+                                </option>
+
+                                <option value="2">
+                                    ⭐⭐ Fair
+                                </option>
+
+                                <option value="1">
+                                    ⭐ Poor
+                                </option>
+
+                            </select>
+
+                            <span class="text-danger">
+                                @Html.ValidationMessage("Rating")
+                            </span>
+
+                        </div>
+
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-bold">
+                                Comment
+                            </label>
+
+                            <textarea class="form-control"
+                                      name="Comment"
+                                      rows="5"
+                                      maxlength="500"
+                                      placeholder="Share your experience with this vehicle and service..."></textarea>
+
+                            <small class="text-muted">
+                                Maximum 500 characters.
+                            </small>
+
+                        </div>
+
+
+                        <div class="d-flex justify-content-between">
+
+                            <a asp-controller="Booking"
+                               asp-action="History"
+                               class="btn btn-outline-secondary">
+                                Back to My Bookings
+                            </a>
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Submit Review
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
